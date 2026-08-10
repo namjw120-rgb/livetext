@@ -38,6 +38,13 @@ function getFontSize(len) {
   return '0.9rem'
 }
 
+// 짧은 메시지 → 완전 pill / 긴 메시지 → 둥근 사각형 (텍스트 삐져나옴 방지)
+function getBorderRadius(len) {
+  if (len <= 18) return '999px'
+  if (len <= 45) return '36px'
+  return '24px'
+}
+
 // 버블 크기 실측 후 겹치지 않게 그리디 배치
 function greedyPlace(wrapEl, screenEl) {
   const sw = screenEl.offsetWidth
@@ -249,9 +256,10 @@ export default function Screen() {
                     top: '-9999px',
                     opacity: 0,
                     transition: 'opacity 0.45s ease',
-                    borderRadius: '999px',
-                    padding: '10px 24px 12px',
+                    borderRadius: getBorderRadius(msg.content.length),
+                    padding: '12px 26px 14px',
                     maxWidth: '28%',
+                    overflow: 'hidden',
                     background: style.background,
                     border: style.border || 'none',
                   }}
@@ -259,10 +267,10 @@ export default function Screen() {
                   <span
                     style={{
                       display: 'block',
-                      fontSize: '0.62rem',
+                      fontSize: '0.75rem',
                       fontWeight: 700,
                       letterSpacing: '0.5px',
-                      marginBottom: '4px',
+                      marginBottom: '5px',
                       color: style.nameColor,
                     }}
                   >
