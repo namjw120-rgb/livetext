@@ -259,7 +259,6 @@ export default function Screen() {
                     borderRadius: getBorderRadius(msg.content.length),
                     padding: '12px 26px 14px',
                     maxWidth: '28%',
-                    overflow: 'hidden',
                     background: style.background,
                     border: style.border || 'none',
                   }}
@@ -283,6 +282,7 @@ export default function Screen() {
                       fontWeight: 700,
                       lineHeight: 1.45,
                       wordBreak: 'keep-all',
+                      overflowWrap: 'break-word',
                       color: style.textColor,
                     }}
                   >
