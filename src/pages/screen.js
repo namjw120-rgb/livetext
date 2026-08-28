@@ -210,8 +210,6 @@ export default function Screen() {
                   key={`${msg.id}-${i}`}
                   style={{
                     width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
                     position: 'relative',
                     padding: '6px 0',
                   }}
@@ -223,8 +221,8 @@ export default function Screen() {
 
                   {/* 슬랫 몸통 */}
                   <div style={{
-                    flex: 1,
-                    margin: '0 7.5%',
+                    marginLeft: '7.5%',
+                    marginRight: '7.5%',
                     borderRadius: 12,
                     padding: '16px 30px',
                     background: style.background,
