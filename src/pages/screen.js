@@ -29,13 +29,7 @@ const SLAT_STYLES = {
   },
 }
 
-function getSlatFontSize(len) {
-  if (len <= 15)  return '2rem'
-  if (len <= 40)  return '1.6rem'
-  if (len <= 80)  return '1.3rem'
-  if (len <= 120) return '1.1rem'
-  return '0.95rem'
-}
+const SLAT_FONT_SIZE = '1.2rem'
 
 const ROPE_STYLE = {
   position: 'absolute',
@@ -203,7 +197,6 @@ export default function Screen() {
             {[...messages, ...messages].map((msg, i) => {
               const type  = SLAT_TYPES[i % 3]
               const style = SLAT_STYLES[type]
-              const fs    = getSlatFontSize(msg.content.length)
 
               return (
                 <div
@@ -224,7 +217,7 @@ export default function Screen() {
                     marginLeft: '7.5%',
                     marginRight: '7.5%',
                     borderRadius: 12,
-                    padding: '16px 30px',
+                    padding: '24px 40px',
                     background: style.background,
                     border: style.border || 'none',
                     position: 'relative',
@@ -242,7 +235,7 @@ export default function Screen() {
                     </span>
                     <p style={{
                       margin: 0,
-                      fontSize: fs,
+                      fontSize: SLAT_FONT_SIZE,
                       fontWeight: 700,
                       lineHeight: 1.45,
                       wordBreak: 'keep-all',
