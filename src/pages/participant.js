@@ -55,7 +55,7 @@ export default function Participant() {
     return (
       <div style={styles.page}>
         <p style={{ color: '#c0392b', fontSize: 16 }}>유효하지 않은 접근입니다.</p>
-        <p style={{ color: '#7db882', marginTop: 8, fontSize: 13 }}>QR 코드를 다시 스캔해 주세요.</p>
+        <p style={{ color: '#a67c52', marginTop: 8, fontSize: 13 }}>QR 코드를 다시 스캔해 주세요.</p>
       </div>
     )
   }
@@ -82,8 +82,8 @@ export default function Participant() {
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
-            <p style={{ color: '#2d7a3a', fontSize: 18, fontWeight: 700, margin: '20px 0 8px' }}>메시지가 전송되었습니다!</p>
-            <p style={{ color: '#7db882', fontSize: 13, margin: 0 }}>운영자 확인 후 스크린에 표시됩니다</p>
+            <p style={{ color: '#5c3d1e', fontSize: 18, fontWeight: 700, margin: '20px 0 8px' }}>메시지가 전송되었습니다!</p>
+            <p style={{ color: '#a67c52', fontSize: 13, margin: 0 }}>운영자 확인 후 스크린에 표시됩니다</p>
             <button onClick={handleSendAnother} style={styles.anotherBtn}>다른 메시지 보내기</button>
           </div>
         ) : (
@@ -111,7 +111,7 @@ export default function Participant() {
                 rows={5}
                 style={{ ...styles.input, resize: 'none', lineHeight: 1.7 }}
               />
-              <p style={{ ...styles.counter, color: remaining <= 20 ? '#c0392b' : '#8ec294' }}>
+              <p style={{ ...styles.counter, color: remaining <= 20 ? '#c0392b' : '#c4956a' }}>
                 {remaining}자 남음
               </p>
             </div>
@@ -141,28 +141,28 @@ export default function Participant() {
 const styles = {
   page: {
     minHeight: '100vh',
-    background: '#e8f5e3',
+    background: '#f5ece0',
     padding: '48px 24px 32px',
     fontFamily: "'Noto Sans KR', sans-serif",
     display: 'flex',
     flexDirection: 'column',
   },
   logo: {
-    color: '#2d7a3a',
+    color: '#5c3d1e',
     fontSize: 24,
     fontWeight: 900,
     margin: '0 0 4px',
     letterSpacing: '-0.5px',
   },
   subText: {
-    color: '#5a9e65',
+    color: '#a67c52',
     fontSize: 13,
     margin: 0,
     fontWeight: 400,
   },
   label: {
     display: 'block',
-    color: '#5a9e65',
+    color: '#a67c52',
     fontSize: 10,
     fontWeight: 700,
     letterSpacing: '1px',
@@ -172,11 +172,11 @@ const styles = {
   input: {
     width: '100%',
     background: '#fff',
-    border: 'none',
+    border: '1px solid rgba(140,99,67,0.2)',
     borderRadius: 16,
     padding: '13px 16px',
     fontSize: 15,
-    color: '#2d4a30',
+    color: '#4a3520',
     outline: 'none',
     boxSizing: 'border-box',
     fontFamily: "'Noto Sans KR', sans-serif",
@@ -188,8 +188,8 @@ const styles = {
   },
   submitBtn: {
     width: '100%',
-    background: '#2d7a3a',
-    color: '#fff',
+    background: '#8b6343',
+    color: '#f5ece0',
     border: 'none',
     borderRadius: 20,
     padding: '16px',
@@ -199,7 +199,7 @@ const styles = {
     marginTop: 8,
   },
   footer: {
-    color: '#7db882',
+    color: '#c4956a',
     fontSize: 11,
     textAlign: 'center',
     marginTop: 'auto',
@@ -209,7 +209,7 @@ const styles = {
     width: 64,
     height: 64,
     borderRadius: '50%',
-    background: '#2d7a3a',
+    background: '#8b6343',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -218,9 +218,9 @@ const styles = {
   anotherBtn: {
     marginTop: 28,
     background: 'transparent',
-    border: '1.5px solid #2d7a3a',
+    border: '1.5px solid #8b6343',
     borderRadius: 14,
-    color: '#2d7a3a',
+    color: '#8b6343',
     padding: '11px 24px',
     fontSize: 13,
     fontWeight: 600,
